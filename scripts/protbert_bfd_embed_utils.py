@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from biotransformers import BioTransformers
 from tqdm import tqdm
 import pickle

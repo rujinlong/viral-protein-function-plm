@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from typing import List
 from tensorflow import keras
 import pandas as pd

@@ -26,6 +26,7 @@ def main():
 	faa_file_name = faa_path.split('.faa')[0].split('/')[-1]
 	### check to see faa exists
 	out_path = os.getcwd() + '/' + args.out
+    repopath = args.repopath
 
 	MODEL = 'model/model_unknown_80_07092023/'
 	CLASSES = 'model/model_unknown_80_07092023_lb.pkl'

@@ -17,6 +17,7 @@ def main():
 	parser.add_argument("--output_embeddings", help="ouput the protein embeddings vectors as a pickle object", action='store_false')
 	parser.add_argument("--output_predictions", help="ouput the protein functional predictions as a csv", action='store_true')
 	parser.add_argument("--prediction_heatmap", help="output protein prediction heatmap", action='store_true')
+	parser.add_argument("--repo_path", help="modelpath", default="/opt/plmvpf", action='store_true')
 	args = parser.parse_args()
 	print(args)
 
@@ -29,8 +30,8 @@ def main():
 	MODEL = 'model/model_unknown_80_07092023/'
 	CLASSES = 'model/model_unknown_80_07092023_lb.pkl'
 
-	MODEL_PATH = os.getcwd() + '/' + MODEL
-	CLASSES_PATH = os.getcwd() + '/' + CLASSES
+	MODEL_PATH = os.path.join(repo_path, MODEL)
+	CLASSES_PATH = os.path.join(repo_path, CLASSES)
 
 	## PHROG model calibrated with EFAM as described in paper manuscript
 	efam_calibration_thresholds = {
